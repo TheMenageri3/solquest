@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { WalletContextProvider } from "@/components/providers/WalletContextProvider";
 import Navbar from "@/components/general/Navbar";
+import '@solana/wallet-adapter-react-ui/styles.css';
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });

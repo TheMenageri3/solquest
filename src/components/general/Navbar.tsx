@@ -1,7 +1,18 @@
 "use client"
 import Logo from "./ui/Logo"
 import Link from "next/link"
-import Button from "./ui/Button"
+import Wallet from "./Wallet"
+
+const links = [
+    {
+        name: "Home",
+        href: "/"
+    },
+    {
+        name: "Publish Bounty",
+        href: "/"
+    }
+]
 
 export default function Navbar(){
     return(
@@ -9,9 +20,12 @@ export default function Navbar(){
             <Logo />
 
             <div className="flex items-center gap-3">
-                <Link className="text-white hover:text-secondary" href="/">Home</Link>
-                <Link className="text-white hover:text-secondary" href="/">Publish Bounty</Link>
-                <Button text="Connect" />
+                {
+                    links.map(link => 
+                        <Link key={link.name} className="text-white hover:text-secondary transition-colors" href={link.href}>{link.name}</Link>
+                    )
+                }
+                <Wallet />
             </div>
         </div>
     )
