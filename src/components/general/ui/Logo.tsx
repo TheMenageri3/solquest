@@ -5,7 +5,7 @@ export default function Logo(){
         <div className="flex gap-3 items-center">
             <Image src={"/assets/solquest.svg"} alt="logo" height={40} width={40} />
 
-            <h1 className="text-4xl font-bold">SolQuest</h1>
+            <h1 className="text-3xl font-bold">SolQuest</h1>
         </div>
     )
 }

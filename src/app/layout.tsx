@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <WalletContextProvider>
-        <body className={inter.className}>
+        <body className={`relative w-screen overflow-hidden ${inter.className}`}>
           <Navbar />
           {children}
         </body>

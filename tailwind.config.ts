@@ -21,6 +21,9 @@ const config: Config = {
         },
         secondary: "rgb(var(--secondary))",
         veil: "rgb(var(--background-veil))"
+      },
+      screens : {
+        tablet: "650px"
       }
     },
   },
