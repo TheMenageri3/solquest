@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { WalletContextProvider } from "@/components/providers/WalletContextProvider";
 import Navbar from "@/components/general/Navbar";
+import Footer from "@/components/general/Footer";
 import '@solana/wallet-adapter-react-ui/styles.css';
 import "./globals.css";
 
@@ -20,9 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <WalletContextProvider>
-        <body className={`relative w-screen overflow-hidden ${inter.className}`}>
+        <body className={`relative w-screen min-h-screen overflow-x-hidden flex flex-col ${inter.className}`}>
           <Navbar />
           {children}
+          <Footer />
         </body>
       </WalletContextProvider>
     </html>

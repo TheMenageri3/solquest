@@ -34,7 +34,6 @@ export const MobileMenu = ({active, setActive}: menu) => {
                         : "flex hover:bg-muted hover:cursor-pointer px-[15px] flex-row gap-[10px] items-center"
                     }
                 >
-                    {/* <Image src={"/assets/navbar-link.svg"} width={20} height={20} alt="link" /> */}
                     <a
                     href={link.href}
                     className="block flex-1 text-white transition-colors hover:text-secondary font-bold py-[10px]"

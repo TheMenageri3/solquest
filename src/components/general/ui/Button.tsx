@@ -2,13 +2,13 @@ import { FC } from "react"
 
 interface props{
     text?: string,
-    type?: number,
+    type?: 1|2,
     clickEvent?: () => void
 }
 
-export function Button({text = "Button", type, clickEvent}: props){
+export function Button({text = "Button", type = 1, clickEvent}: props){
     return(
-        <button onClick={clickEvent} className="px-4 py-1 bg-secondary text-white rounded-md hover:bg-white hover:text-secondary active:bg-secondary active:text-white transition-all">{text}</button>
+        <button onClick={clickEvent} className={`px-4 py-1 ${type == 1? "bg-secondary text-white hover:bg-white hover:text-secondary active:bg-secondary active:text-white" : "bg-white text-primary hover:bg-slate-600 hover:text-white"} rounded-md transition-all`}>{text}</button>
     )
 }
 

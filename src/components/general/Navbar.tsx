@@ -1,6 +1,6 @@
 "use client"
 import Logo from "./ui/Logo"
-import Link from "next/link"
+import A from "./ui/A"
 import Wallet from "./Wallet"
 import { MobileMenu } from "./MobileMenu"
 
@@ -10,9 +10,17 @@ export const NavLinks = [
         href: "/"
     },
     {
-        name: "Publish Bounty",
+        name: "Bounty",
         href: "/"
-    }
+    },
+    {
+        name: "Sign up",
+        href: "/"
+    },
+    {
+        name: "Sign in",
+        href: "/"
+    },
 ]
 
 export default function Navbar(){
@@ -23,7 +31,7 @@ export default function Navbar(){
             <div className="hidden tablet:flex items-center gap-3">
                 {
                     NavLinks.map(link => 
-                        <Link key={link.name} className="text-white hover:text-secondary transition-colors" href={link.href}>{link.name}</Link>
+                        <A key={link.name} href={link.href} name={link.name}/>
                     )
                 }
                 <Wallet />

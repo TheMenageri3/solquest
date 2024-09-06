@@ -22,7 +22,7 @@
 
 @layer base{
   body{
-    @apply bg-gradient-main bg-fixed text-secondary text-lg
+    @apply bg-gradient-main bg-fixed text-white text-lg
   }
 }
 
