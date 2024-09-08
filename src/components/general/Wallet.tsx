@@ -35,10 +35,10 @@ export default function Wallet(){
         {
             !wallet.connected?
             <div>
-                <Button clickEvent={handleConnect} text="Connect Wallet"/> 
+                <Button clickEvent={handleConnect}>Connect Wallet</Button>
             </div>:(wallet.connected && wallet.publicKey &&
             <div>
-                <Button clickEvent={() => {setManage(true)}} text={minimizePubkey(wallet.publicKey.toBase58())} />
+                <Button clickEvent={() => {setManage(true)}}>{minimizePubkey(wallet.publicKey.toBase58())}</Button>
             </div>)
         }
 
@@ -48,8 +48,8 @@ export default function Wallet(){
                 <section className="relative bg-primary-muted w-[300px] aspect-[1.5] p-3 py-8 flex flex-col items-center gap-5 rounded-lg">
                     <CloseButton handleClick={() => {setManage(false)}}/>
                     <p><b>Manage Wallet</b></p>
-                    <Button clickEvent={handleDisconnect} text="Disconnect Wallet"/>
-                    <Button clickEvent={handleChange} text="Change Wallet"/>
+                    <Button clickEvent={handleDisconnect}>Disconnect Wallet</Button>
+                    <Button clickEvent={handleChange}>Change Wallet</Button>
                 </section>
             </div>
         }

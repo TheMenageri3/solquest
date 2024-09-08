@@ -1,17 +1,14 @@
 "use client"
 import Logo from "./ui/Logo"
+import Link from "next/link"
 import A from "./ui/A"
 import Wallet from "./Wallet"
 import { MobileMenu } from "./MobileMenu"
 
 export const NavLinks = [
     {
-        name: "Home",
-        href: "/"
-    },
-    {
-        name: "Bounty",
-        href: "/"
+        name: "Bounties",
+        href: "/bounties"
     },
     {
         name: "Sign up",
@@ -26,7 +23,7 @@ export const NavLinks = [
 export default function Navbar(){
     return(
         <nav className="flex items-center justify-between py-2 px-5 max-w-7xl w-full m-auto">
-            <Logo />
+            <Link href={"/"}> <Logo /> </Link>
 
             <div className="hidden tablet:flex items-center gap-3">
                 {

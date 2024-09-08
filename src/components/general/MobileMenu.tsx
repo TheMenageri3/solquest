@@ -2,7 +2,6 @@ import Image from "next/image";
 import { NavLinks } from "./Navbar";
 import { useState } from "react";
 import Wallet from "./Wallet";
-import Logo from "./ui/Logo";
 import { CloseButton } from "./ui/Button";
 
 interface menu{
