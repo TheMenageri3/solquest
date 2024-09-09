@@ -37,7 +37,6 @@ const Label:React.FC<{children: React.ReactNode}> = ({children}) => {
     return(
         <>
         <p className="my-2 text-secondary"><b>{children}</b></p>
-        {/* <hr className="text-secondary"/> */}
         </>
     )
 } 

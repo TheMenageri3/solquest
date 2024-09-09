@@ -1,6 +1,7 @@
 import { H1 } from "@/components/general/ui/H1"
 import Sidebar from "@/components/sidebar/Sidebar"
 import Search from "./search"
+import { Listing } from "@/components/general/Listing"
 
 export default function Bounties(){
   return(
@@ -11,6 +12,19 @@ export default function Bounties(){
             <div className="flex-1">
                 {/* <p>Featured Bounties</p> */}
                 <Search />
+
+                <Listing title="Frontend for Degenspace" publisher="Menageri3" pay={1500}/>
+                <Listing title="Frontend for Degenspace" publisher="Menageri3" pay={1500}/>
+                <Listing title="Frontend for Degenspace" publisher="Menageri3" pay={1500}/>
+                <Listing title="Frontend for Degenspace" publisher="Menageri3" pay={1500}/>
+                <Listing title="Frontend for Degenspace" publisher="Menageri3" pay={1500}/>
+                <Listing title="Frontend for Degenspace" publisher="Menageri3" pay={1500}/>
+                <Listing title="Frontend for Degenspace" publisher="Menageri3" pay={1500}/>
+                <Listing title="Frontend for Degenspace" publisher="Menageri3" pay={1500}/>
+                <Listing title="Frontend for Degenspace" publisher="Menageri3" pay={1500}/>
+                <Listing title="Frontend for Degenspace" publisher="Menageri3" pay={1500}/>
+                <Listing title="Frontend for Degenspace" publisher="Menageri3" pay={1500}/>
+                <Listing title="Frontend for Degenspace" publisher="Menageri3" pay={1500}/>
             </div>
         </section>
     </main>
