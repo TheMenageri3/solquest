@@ -20,9 +20,9 @@ export const CloseButton:FC<{handleClick?: () => void}> = ({handleClick}) => {
 }
 
 //Allows one to directly specify the src for the icon or use the children prop instead
-export const IconButton:FC<{handleClick?: () => void, type?: 1|2, src?: string, alt?: string, size?:number, children: React.ReactNode}> = ({handleClick, type=1, src, alt="icon", size=25, children}) => {
+export const IconButton:FC<{handleClick?: () => void, type?: 1|2, src?: string, alt?: string, size?:"lg"|"sm", children: React.ReactNode}> = ({handleClick, type=1, src, alt="icon", size=25, children}) => {
     return(
-        <button onClick={handleClick} className={`p-1 flex items-center justify-center ${type == 1? "bg-secondary text-white hover:bg-white hover:text-secondary active:bg-secondary active:text-white" : "bg-white text-primary hover:bg-slate-600 hover:text-white"} rounded-md transition-all aspect-square w-[${size}px]`} title="icon">
+        <button onClick={handleClick} className={`p-1 flex items-center justify-center ${type == 1? "bg-secondary text-white hover:bg-white hover:text-secondary active:bg-secondary active:text-white" : "bg-white text-primary hover:bg-slate-600 hover:text-white"} rounded-md transition-all aspect-square w-[45px]`} title="icon">
             {src && <Image src={src} alt={alt}/>}
             {!src && children}
         </button>
