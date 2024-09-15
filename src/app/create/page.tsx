@@ -12,7 +12,7 @@ export default function CreateBounty(){
                 </h2>
 
                 <Input label="Title" />
-                <Input label="Description" type="area"/>
+                <Input label="Details" type="area"/>
                 <Input label="Track" type="select" options={["Frontend", "Backend", "Rust"]} />
                 <Input label="Pay" type="number" />
 

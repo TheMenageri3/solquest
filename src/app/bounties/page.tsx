@@ -3,6 +3,7 @@ import Sidebar from "@/components/sidebar/Sidebar"
 import Search from "./search"
 import { Button } from "@/components/general/ui/Button"
 import { Listing } from "@/components/general/Listing"
+import bounties from "@/resources/bounty.json"
 import Link from "next/link"
 
 export default function Bounties(){
@@ -16,18 +17,9 @@ export default function Bounties(){
                 {/* <p>Featured Bounties</p> */}
                 <Search />
 
-                <Listing title="Frontend for Degenspace" publisher="Menageri3" pay={1500}/>
-                <Listing title="Frontend for Degenspace" publisher="Menageri3" pay={1500}/>
-                <Listing title="Frontend for Degenspace" publisher="Menageri3" pay={1500}/>
-                <Listing title="Frontend for Degenspace" publisher="Menageri3" pay={1500}/>
-                <Listing title="Frontend for Degenspace" publisher="Menageri3" pay={1500}/>
-                <Listing title="Frontend for Degenspace" publisher="Menageri3" pay={1500}/>
-                <Listing title="Frontend for Degenspace" publisher="Menageri3" pay={1500}/>
-                <Listing title="Frontend for Degenspace" publisher="Menageri3" pay={1500}/>
-                <Listing title="Frontend for Degenspace" publisher="Menageri3" pay={1500}/>
-                <Listing title="Frontend for Degenspace" publisher="Menageri3" pay={1500}/>
-                <Listing title="Frontend for Degenspace" publisher="Menageri3" pay={1500}/>
-                <Listing title="Frontend for Degenspace" publisher="Menageri3" pay={1500}/>
+                {bounties.map(bounty => 
+                  <Listing key={bounty.title} title={bounty.title} details={bounty.details} pay={bounty.pay} publisher={bounty.publisher} />
+                )}
             </div>
         </section>
     </main>
